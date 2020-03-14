@@ -3,20 +3,18 @@ package by.evgKor.bean;
 public class MathOperationDemo {
     public double a;
     public double b;
-
-    public double getA() {
-        return a;
+    public double amount(double a,double b){
+        return (a+b);
+    }
+    public double difference(double a, double b){
+        return (a-b);
+    }
+    public double multiplication(double a, double b){
+        return (a*b);
+    }
+    public double division(double a, double b){
+        return (a/b);
     }
 
-    public void setA(double a) {
-        this.a = a;
-    }
-
-    public double getB() {
-        return b;
-    }
-
-    public void setB(double b) {
-        this.b = b;
-    }
 }
+
