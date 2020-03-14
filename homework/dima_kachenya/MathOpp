@@ -1,0 +1,28 @@
+package com.company;
+
+public class Main {
+
+    public static void main(String[] args) {
+        double firstNumberForSum = 5,
+                secondNumberForSumm = -5,
+                resultSum = firstNumberForSum + secondNumberForSumm;
+        System.out.println(resultSum);
+
+        double firstNumberForSub = 4,
+                secondNumberForSub = -4,
+                resultSub = firstNumberForSub - secondNumberForSub;
+        System.out.println(resultSub);
+
+        double firstNumberForMul = 4,
+                secondNumberForMul = -4,
+                resultMul = firstNumberForMul * secondNumberForMul;
+        System.out.println(resultMul);
+
+        double firstNumberForDiv = 4,
+                secondNumberForDiv = -4,
+                resultDiv = firstNumberForDiv / secondNumberForDiv;
+        System.out.println(resultDiv);
+
+
+    }
+}
