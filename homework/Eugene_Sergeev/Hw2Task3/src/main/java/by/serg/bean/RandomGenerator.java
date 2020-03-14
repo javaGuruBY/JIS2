@@ -9,19 +9,19 @@ public class RandomGenerator {
 
     public void generateFirstNumberViaMath(double min, double max) {
         max -= min;
-        this.number1 = Math.random()*++max+min;
+        this.number1 = Math.random()*max+min;
         System.out.println("number1 = " + number1);
     }
 
     public void generateSecondNumberViaMath(double min, double max) {
         max -= min;
-        this.number2 = Math.random()*++max+min;
+        this.number2 = Math.random()*max+min;
         System.out.println("number2 = " + number2);
     }
 
     public void generateThirdNumberViaMath(double min, double max) {
         max -= min;
-        this.number3 = Math.random()*++max+min;
+        this.number3 = Math.random()*max+min;
         System.out.println("number3 = " + number3);
     }
 
