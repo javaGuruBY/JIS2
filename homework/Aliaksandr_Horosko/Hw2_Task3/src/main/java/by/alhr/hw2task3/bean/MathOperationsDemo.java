@@ -1,4 +1,4 @@
-package by.alhr.hw2task3;
+package by.alhr.hw2task3.bean;
 
 import by.alhr.hw2task3.bean.MathOperations;
 
