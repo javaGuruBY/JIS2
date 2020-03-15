@@ -3,23 +3,23 @@ package by.alhr.hw2task3.bean;
 import java.util.Objects;
 
 public class MathOperations {
-    int a = 10;
-    int b = 10;
-    public double summ() {
+    public int a;
+    public int b;
+    public double summ(int a,int b) {
 
         return a + b;
     }
-    public double difference () {
+    public double difference (int a,int b) {
 
         return a - b;
     }
-    public double multiplication () {
+    public double multiplication (int a,int b) {
 
         return a * b;
     }
-    public double division() {
+    public double division(int a,int b) {
 
-        return a / b;
+        return (double) a / b;
     }
 
 }
