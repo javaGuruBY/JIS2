@@ -2,7 +2,7 @@ package com.kachenya.bean;
 
 import java.util.Objects;
 
-public class Human {
+public class Human implements Serializable {
     private String name;
     private int age;
 
