@@ -9,6 +9,6 @@ public class MathOperationsDemon {
         System.out.println("b + b = " + (b + b));
         System.out.println("b * a = " + (b * a));
         System.out.println("a / b = " + (a / b));
-
+        System.out.println("a - b = " + (a - b));
     }
 }
