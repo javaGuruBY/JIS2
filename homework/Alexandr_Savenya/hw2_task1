@@ -16,5 +16,5 @@
 Банковский счет bankAccount;
 Банковский баланс bankBalance;
 Кредитная карта creditCard;
-Количество колес у велосипеда WheelOfBikeCount;
+Количество колес у велосипеда wheelOfBikeCount;
 Стоимость билета ticketPrice;
