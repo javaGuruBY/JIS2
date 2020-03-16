@@ -18,11 +18,7 @@ public class Dog {
     }
 
     public void setAge(int age) {
-        if(age>12){
-            System.out.println("I'm very old, I want sleep");
-        } else {
-            System.out.println("I'm young, I want to play with you, don't sleep");
-        }
+        this.age=age;
 
 
     }
