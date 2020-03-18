@@ -1,8 +1,9 @@
 package by.alhr.bean;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Dog {
+public class Dog implements Serializable {
     private int Age;
     private String color;
     private String name;
