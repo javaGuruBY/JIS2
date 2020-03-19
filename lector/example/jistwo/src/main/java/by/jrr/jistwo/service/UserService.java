@@ -10,6 +10,7 @@ public class UserService implements Runnable{
         System.out.println(MyUtilities.mimicObjectToString(firstNumber));
         firstNumber.replace("something", "another");
         System.out.println(MyUtilities.mimicObjectToString(firstNumber));
+        System.out.println(MyUtilities.mimicObjectToString(firstNumber));
         User user = new User("Vova", 26);
         System.out.println(MyUtilities.mimicObjectToString(user));
         user.setName("Zanova");
