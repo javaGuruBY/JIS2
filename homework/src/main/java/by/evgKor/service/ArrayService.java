@@ -21,8 +21,8 @@ public class ArrayService implements Runnable{
     public void fillRandomly(int[] array) {
         for(int i=0;i<array.length;i++){
             array[i]=(int)(Math.random()*100);
-            System.out.print( "["+i+"]= " + array[i]+";");
         }
+        printArray(array);
     }
     public void printArray(int[] array){
         for (int Array:array) {
