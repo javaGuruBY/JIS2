@@ -14,9 +14,9 @@ public class PrimeNumbers implements Runnable {
             if (i == 17 || i == 71) {
                 continue;
             }
-            summ += i;
             if (i > 1 && i <= 3) {
                 simpleNumbers++;
+                summ += i;
                 continue;
             }
             for (int j = 2; j < i; j++) {
@@ -25,10 +25,11 @@ public class PrimeNumbers implements Runnable {
                 }
                 if (j == (i-1)) {
                     simpleNumbers++;
+                    summ += i;
                 }
             }
         }
-        System.out.println("summ =" + summ + ", count = " + simpleNumbers);
+        System.out.println("summ = " + summ + ", count = " + simpleNumbers);
     }
 
     @Override
