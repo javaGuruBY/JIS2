@@ -7,8 +7,7 @@ public class NumberService {
         for (int i = start; start <= finish; start++) {
             sum += start;
         }
-    }
-    if (start > finish) {
+    }else{
         for (int i = start; start >= finish; start--) {
             sum += start;
         }
@@ -24,8 +23,7 @@ public class NumberService {
                     count++;
                 }
             }
-        }
-        if (start > finish) {
+        }else{
             for (int i=start; start >= finish; start--) {
                 if (start % 2 == 0) {
                     count++;
