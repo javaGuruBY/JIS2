@@ -1,0 +1,74 @@
+package by.lukash.LookupArray.bean;
+
+import java.util.Arrays;
+
+public class LookUpArrayService implements Runnable {
+    @Override
+    public void run() {
+        int[] number = {1, 2, 3, 4, 5, 21, 55, 87, 99};
+        LookUpArrayService lookUpArrayService = new LookUpArrayService();
+        lookUpArrayService.findMax(number);
+        lookUpArrayService.findMin(number);
+        lookUpArrayService.indexOfMax(number);
+        lookUpArrayService.indexOfMin(number);
+        lookUpArrayService.indexOf(number, 87);
+    }
+
+    public int findMax(int[] array) {
+        int max = array[0];
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] > max) {
+                max = array[i];
+            }
+        }
+        System.out.println("Max number= " + max);
+        return max;
+    }
+
+    public int findMin(int[] array) {
+        int min = array[0];
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] < min) {
+                min = array[i];
+            }
+        }
+        System.out.println("Min number = " + min);
+        return min;
+    }
+
+    public int indexOfMax(int[] array) {
+        int indexOfMax = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (array[indexOfMax] < array[i]) {
+                indexOfMax = i;
+            }
+        }
+        System.out.println("Index of max number = " + indexOfMax);
+        return indexOfMax;
+    }
+
+    public int indexOfMin(int[] array) {
+        int indexOfMin = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (array[indexOfMin] > array[i]) {
+                indexOfMin = i;
+            }
+        }
+        System.out.println("Index of min = " + indexOfMin);
+        return indexOfMin;
+    }
+
+    public int indexOf(int[] array, int value) {
+        int indexOf = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == value) {
+                indexOf = i;
+                System.out.println("Index of value numb = " + indexOf);
+            } else if (array.length == 0){
+                System.out.println("array = -1");
+            }
+        }
+        return indexOf;
+
+    }
+}
