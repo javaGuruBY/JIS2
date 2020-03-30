@@ -1,0 +1,16 @@
+package by.lukash.ArrayService;
+
+import by.lukash.ArrayService.service.ArrayService;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class ArrayServiceApplication {
+
+	public static void main(String[] args) {
+		Thread thread=new Thread(new ArrayService());
+		thread.start();
+	//	SpringApplication.run(ArrayServiceApplication.class, args);
+	}
+
+}
