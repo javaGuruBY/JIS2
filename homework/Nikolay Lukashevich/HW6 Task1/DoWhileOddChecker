@@ -1,0 +1,22 @@
+package by.lukash.HW6Task1.bean;
+
+public class DoWhileOddChecker implements Runnable{
+
+    public void showOddNumbersFromZeroToFifty() {
+        int i = 0;
+        do {
+            if (i % 2 == 0) {
+                i++;
+                continue;
+            }
+            System.out.println("i through 'do...while' = " + i);
+            i++;
+        } while (i <= 50);
+    }
+
+    @Override
+    public void run() {
+        DoWhileOddChecker doWhileOddChecker = new DoWhileOddChecker();
+        doWhileOddChecker.showOddNumbersFromZeroToFifty();
+    }
+}
