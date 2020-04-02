@@ -1,0 +1,12 @@
+package by.lukash;
+import by.lukash.bean.Human;
+import by.lukash.services.HumanServices;
+
+public class HumanDemo {
+    public static void main(String[] args) {
+    Human firstHuman = new Human("Nikolay", 27);
+    HumanServices humanServices = new HumanServices();
+    humanServices.greet(firstHuman);
+    }
+
+}

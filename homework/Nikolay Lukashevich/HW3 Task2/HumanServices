@@ -1,0 +1,12 @@
+package by.lukash.services;
+import by.lukash.bean.Human;
+
+public class HumanServices {
+    HumanServices humanServices;
+
+    public void greet(Human human) {
+        System.out.println("Hello! My name is " + Human.getName() + " and i'm " + Human.getAge() + " years old.");
+
+    }
+
+}
