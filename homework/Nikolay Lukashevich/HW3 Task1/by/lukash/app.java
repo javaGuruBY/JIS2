@@ -4,8 +4,8 @@ import by.lukash.services.DogServices;
 
 public class app {
     public static void main (String[] args){
-        Dog firstDog = new Dog (5, "black", "Bobik");
-        System.out.println("hello, my name is "+firstDog.getName()+" I'm "+firstDog.getAge()+" years old "+" I'm a "+firstDog.getColor()+" color");
+        Dog Dog = new Dog (5, "black", "Bobik");
+        System.out.println("hello, my name is "+Dog.getName()+" I'm "+Dog.getAge()+" years old "+" I'm a "+Dog.getColor()+" color");
         DogServices dogService=new DogServices();
         dogService.eat();
         dogService.sleep(firstDog);
