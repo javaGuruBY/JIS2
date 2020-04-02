@@ -10,7 +10,7 @@ public class DogServices {
     public void eat() {
         System.out.println("I want eat");
     }
-    public void sleep(Dog firstDog) {
+    public void sleep(Dog dog) {
         if(Dog.getAge()>=12){
             System.out.println("I want to sleep");
         }else {
