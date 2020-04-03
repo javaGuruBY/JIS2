@@ -5,12 +5,14 @@ import by.evgKor.service.DogService;
 
 public class App {
     public static void main(String[] args) {
-        Dog dogNumOne=new Dog(20,"black","bars");
-        System.out.println("hello, my name is "+dogNumOne.getName()+" I'm "+dogNumOne.getAge()+" years old "+" I'm a "+dogNumOne.getColor()+" color");
+        Dog dog=new Dog(20,"black","bars");
+        System.out.println("hello, my name is "+dog.getName()+
+                " I'm "+dog.getAge()+" years old "+" I'm a "
+                +dog.getColor()+" color");
         DogService dogService=new DogService();
-        dogService.eat();
-        dogService.sleep(dogNumOne);
-        dogService.voice();
+        dogService.eat(dog);
+        dogService.sleep(dog);
+        dogService.voice(dog);
 
 
     }

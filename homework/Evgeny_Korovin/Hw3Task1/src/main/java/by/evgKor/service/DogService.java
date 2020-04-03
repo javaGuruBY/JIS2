@@ -1,13 +1,13 @@
 package by.evgKor.service;
 import by.evgKor.bean.Dog;
 public class DogService {
-     DogService dogService;
 
-    public void voice() {
+    public void voice(Dog dog)
+    {
         System.out.println("Waaaf-Waaf");
     }
 
-    public void eat() {
+    public void eat(Dog dog) {
         System.out.println("I'm hungry, I want eat");
 
     }
