@@ -1,7 +1,5 @@
 package by.evgKor.service;
 
-import java.util.Random;
-
 public class ArrayService implements Runnable{
 
     @Override
