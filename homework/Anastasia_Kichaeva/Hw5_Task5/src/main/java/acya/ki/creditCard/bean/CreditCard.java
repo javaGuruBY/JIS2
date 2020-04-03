@@ -83,10 +83,8 @@ public class CreditCard implements Serializable, Runnable {
                 cardBalance = cardBalance + depositAmount;
             } else if (creditDebt < 0 && creditDebt + depositAmount <= 0) {
                 creditDebt = creditDebt + depositAmount;
-                creditLimit = creditLimit + depositAmount;
             } else if (creditDebt < 0 && creditDebt + depositAmount > 0) {
                 depositAmount = creditDebt + depositAmount;
-                creditLimit = creditLimit - creditDebt;
                 creditDebt = creditDebt - creditDebt;
                 cardBalance = cardBalance + depositAmount;
 
@@ -108,19 +106,18 @@ public class CreditCard implements Serializable, Runnable {
         if (pinCod == cardPinCod) {
             System.out.println("Input the desired amount: ");
             double desiredAmount = scan.nextDouble();
-            if (cardBalance - desiredAmount < 0 && creditLimit >= desiredAmount - cardBalance){
+            if(creditLimit + (creditDebt - (desiredAmount - cardBalance)) < 0){
+                System.out.println("Credit limit exceeded!");
+            } else if (cardBalance - desiredAmount < 0){
                 desiredAmount = desiredAmount - cardBalance;
                 cardBalance = cardBalance - cardBalance;
                 creditDebt = creditDebt - desiredAmount;
                 System.out.println("Card Balance = " + cardBalance);
                 System.out.println("Credit debt = " + creditDebt);
-                creditLimit = creditLimit - desiredAmount;
                 System.out.println("Credit limit = " + creditLimit);
             } else if (cardBalance - desiredAmount >= 0){
                 cardBalance = cardBalance - desiredAmount;
                 System.out.println("Withdrawal of funds from the balance were successful. Card balance = " + cardBalance);
-            } else if(creditLimit < desiredAmount - cardBalance){
-                System.out.println("Operation not possible!!! Сredit limit exceeded!");
             }
 
         } else {
@@ -130,7 +127,7 @@ public class CreditCard implements Serializable, Runnable {
 
     }
 
-        @Override
+    @Override
     public void run() {
 
         CreditCard visa = new CreditCard(12345678, 1234);
@@ -138,7 +135,9 @@ public class CreditCard implements Serializable, Runnable {
         visa.setCardBalance(100);
         System.out.println(visa);
         visa.withDraw();
-            System.out.println(visa);
+        System.out.println(visa);
         visa.deposit();
+        visa.withDraw();
+        visa.withDraw();
     }
 }
