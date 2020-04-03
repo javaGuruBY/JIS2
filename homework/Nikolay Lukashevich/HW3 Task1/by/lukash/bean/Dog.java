@@ -5,7 +5,7 @@ import java.util.Objects;
 
 public class Dog implements Serializable {
 
-    private static int age;
+    private int age;
     private String color;
     private String name;
 
@@ -18,7 +18,7 @@ public class Dog implements Serializable {
         this.name = name;
     }
 
-    public static int getAge() {
+    public int getAge() {
         return age;
     }
 
