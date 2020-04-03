@@ -1,4 +1,4 @@
-package by.nluaksh;
+package by.nlukash;
 
 public class Encoder {
     public static void encode(short code) {
