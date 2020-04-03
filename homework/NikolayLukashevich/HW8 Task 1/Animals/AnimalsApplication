@@ -1,0 +1,26 @@
+package by.lukash.animals;
+
+import by.lukash.animals.bean.Cat;
+import by.lukash.animals.bean.Dog;
+import by.lukash.animals.bean.Parrot;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import java.util.Arrays;
+
+@SpringBootApplication
+public class AnimalsApplication {
+
+	public static void main(String[] args) {
+//		SpringApplication.run(AnimalsApplication.class, args);
+		Dog Ralf = new Dog("Ralf", 8, 4 );
+		Ralf.voice();
+		Cat Rudolf = new Cat("Rudolf", 7,4);
+		System.out.println(Rudolf);
+		Parrot Sokol = new Parrot("Sokol", 10, true, 1);
+		Parrot Pingvin = new Parrot("Pingvin", 4, false, 2);
+		System.out.println(Sokol);
+		System.out.println(Pingvin);
+	}
+
+}
