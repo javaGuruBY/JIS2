@@ -2,16 +2,15 @@ package by.lukash.services;
 import by.lukash.bean.Dog;
 
 public class DogServices {
-    DogServices dogServices;
 
-    public void voice() {
+        public void voice(Dog firstDog) {
         System.out.println("Woof-Woof");
     }
-    public void eat() {
+    public void eat(Dog firstDog) {
         System.out.println("I want eat");
     }
-    public void sleep(Dog dog) {
-        if(Dog.getAge()>=12){
+    public void sleep(Dog firstDog) {
+        if(firstDog.getAge()>=12){
             System.out.println("I want to sleep");
         }else {
             System.out.println("Wat you want?");
