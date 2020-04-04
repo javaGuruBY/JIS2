@@ -2,8 +2,8 @@ package by.seven;
 
 public class RandomGeneratorDemo {
     public static void main(String[] args) {
-     int a = 0; //нижнее значение диапазона
-     int b = 100; // верхнее значение диапазона
+        int a = 0; //нижнее значение диапазона
+        int b = 100; // верхнее значение диапазона
         int firstRandomNum = a + (int) (Math.random() * b);
         int secondRandomNum = a + (int) (Math.random() * b);
         int thirdRandomNum = a + (int) (Math.random() * b);
