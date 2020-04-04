@@ -5,8 +5,13 @@ import by.alhr.service.CircleService;
 
 public class CircleDemo {
     public static void main(String[] args) {
-        Circle circle1 = new Circle(3);
+        Circle circle = new Circle(25);
+        Circle circle2 = new Circle(5.25);
+        Circle circle3 = new Circle(7);
+
         CircleService circleService = new CircleService();
-        System.out.println(circleService.calculateArea(circle1));
+        circleService.calculateArea(circle);
+        circleService.calculateArea(circle2);
+        circleService.calculateArea(circle3);
     }
 }
