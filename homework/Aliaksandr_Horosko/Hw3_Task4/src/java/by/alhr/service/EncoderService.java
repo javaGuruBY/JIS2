@@ -1,15 +1,17 @@
 package by.alhr.service;
 
+import by.alhr.bean.Encoder;
+
 public class EncoderService {
 
     public EncoderService() {
     }
 
-    public void encode(short code) {
-        System.out.println(code + " => " + (char) code);
+    public void encode(Encoder encoder) {
+        System.out.println(encoder.getCode() + " => " + (char) encoder.getCode());
     }
 
-    public void decode(char symbol) {
-        System.out.println(symbol + " => " + (short) symbol);
+    public void decode(Encoder encoder) {
+        System.out.println(encoder.getSymbol() + " => " + (short) encoder.getSymbol());
     }
 }
