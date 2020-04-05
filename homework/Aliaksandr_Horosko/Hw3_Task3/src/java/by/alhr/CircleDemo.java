@@ -12,6 +12,7 @@ public class CircleDemo {
         Circle circle5 = new Circle(21.252);
         Circle circle6 = new Circle(77/77);
         CircleService circleService = new CircleService();
+
         circleService.calculateArea(circle);
         circleService.calculateArea(circle2);
         circleService.calculateArea(circle3);
