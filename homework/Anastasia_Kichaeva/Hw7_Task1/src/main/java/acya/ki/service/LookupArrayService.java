@@ -38,12 +38,13 @@ public class LookupArrayService implements Serializable, Runnable {
         return min;
     }
 
-    public int indexOfMax(int[] array) { ;
+    public int indexOfMax(int[] array) {
         int indexForMax = 0;
+        if (isArrayEmpty(array)) {
+            indexForMax = -1;
+        }
         for (int i = 0; i < array.length; i++) {
-            if (isArrayEmpty(array)) {
-                indexForMax = -1;
-            }else if(array[i] > array[indexForMax]){
+            if(array[i] > array[indexForMax]){
                 indexForMax = i;
             }
         }
@@ -53,10 +54,11 @@ public class LookupArrayService implements Serializable, Runnable {
 
     public int indexOfMin(int[] array) {
         int indexForMin = 0;
+        if(isArrayEmpty(array)) {
+            indexForMin = -1;
+        }
         for(int i = 0; i < array.length; i++){
-            if(isArrayEmpty(array)){
-                indexForMin = -1;
-            }else if(array[i] < array[indexForMin]){
+            if(array[i] < array[indexForMin]){
                 indexForMin = i;
             }
         }
@@ -66,10 +68,11 @@ public class LookupArrayService implements Serializable, Runnable {
 
     public int indexOf(int[] array, int value) {
         int index = 0;
+        if (isArrayEmpty(array)) {
+            index = -1;
+        }
         for(int i = 0; i < array.length; i++) {
-            if (isArrayEmpty(array)) {
-                index = -1;
-            } else if(array[i] == value){
+            if(array[i] == value){
                 index = i;
                 break;
             }
