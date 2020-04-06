@@ -11,10 +11,6 @@ public class Circle extends AbstractShape {
         this.name=name;
     }
 
-    public String getName() {
-        return name;
-    }
-
     public double getArea() {
         return Math.PI*Math.pow(radiusOfCircle,2);
     }
