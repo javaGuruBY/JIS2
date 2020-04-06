@@ -16,7 +16,6 @@ public class LookupArrayService implements Serializable, Runnable {
         return true;
     }
 
-
     public int findMax(int[] array) {
         int max = array[0];
         for (int i = 0; i < array.length; i++) {
@@ -83,9 +82,23 @@ public class LookupArrayService implements Serializable, Runnable {
         LookupArrayService lookupArrayService = new LookupArrayService();
         int[] array1 = {4, 88, 404, 88, 12, 88, 1};
         int[] array2 = {0, 0, 0, 0, 0, 0, 0, 0, 0};
+
+        lookupArrayService.isArrayEmpty(array1);
+        lookupArrayService.isArrayEmpty(array2);
+
+        lookupArrayService.findMax(array1);
+        lookupArrayService.findMax(array2);
+
+        lookupArrayService.findMin(array1);
+        lookupArrayService.findMin(array2);
+
+        lookupArrayService.indexOfMax(array1);
+        lookupArrayService.indexOfMax(array2);
+
+        lookupArrayService.indexOfMin(array1);
+        lookupArrayService.indexOfMin(array2);
+
         lookupArrayService.indexOf(array1, 88);
         lookupArrayService.indexOf(array2, 88);
-
-
     }
 }
