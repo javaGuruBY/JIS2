@@ -11,10 +11,6 @@ public class Square extends AbstractShape {
         this.lenghtOfSquare=lenghtOfSquare;
     }
 
-    public String getName() {
-        return name;
-    }
-
     public double getArea() {
         return Math.pow(lenghtOfSquare,2);
     }
