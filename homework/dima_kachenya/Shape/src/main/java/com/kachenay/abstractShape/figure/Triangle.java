@@ -17,9 +17,6 @@ public class Triangle extends AbstractShape {
         this.thirdLenghtOfTringle = thirdLenghtOfTringle;
     }
 
-    public String getName() {
-        return name;
-    }
 
     public double getArea() {
         double p = (firstLenghtOfTringle + secondLenghtOfTringle + thirdLenghtOfTringle) / 2;
