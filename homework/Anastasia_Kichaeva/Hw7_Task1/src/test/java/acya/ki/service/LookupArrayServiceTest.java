@@ -9,7 +9,7 @@ public class LookupArrayServiceTest {
     LookupArrayService lookupArrayServiceTest = new LookupArrayService();
 
     int[] arrayTest = {34, 5, 42, 18, 99, 63, 0, 18};
-    int[] arrayTest2 = {0,0,0,0,0,0,0};
+    int[] arrayTest2 = {};
 
     @org.testng.annotations.Test
     public void testIsArrayEmpty() {
