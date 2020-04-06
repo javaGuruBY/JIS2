@@ -9,6 +9,11 @@ public abstract class AbstractShape implements Shape {
     protected double firstLenghtOfTringle;
     protected double secondLenghtOfTringle;
     protected double thirdLenghtOfTringle;
+    
+    public String getName() {
+        return name;
+    }
+
 
 
 }
