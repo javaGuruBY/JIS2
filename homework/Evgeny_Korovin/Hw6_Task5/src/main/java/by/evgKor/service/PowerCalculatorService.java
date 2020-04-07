@@ -1,16 +1,22 @@
 package by.evgKor.service;
 
 public class PowerCalculatorService implements Runnable {
-    public static int exponentiation(int number, int power){
-        for(int i=number;i<power;i++){
-            System.out.println("Result: " + (int)Math. pow(number, power));
+    public int exponentiation(int number, int power) {
+        int result = 1;
+        for (int i = 1; i <= power; i++) {
+            if (number < 0 || power < 0) {
+                System.out.println("Error, all numbers should be positive");
+            } else {
+                result *= number;
+            }
         }
-        return number;
+        System.out.println("Result of calculation = " + result);
+        return result;
     }
 
     @Override
     public void run() {
-        PowerCalculatorService powerCalculatorService=new PowerCalculatorService();
-        powerCalculatorService.exponentiation(2,3);
+        PowerCalculatorService powerCalculatorService = new PowerCalculatorService();
+        powerCalculatorService.exponentiation(2, 6);
     }
 }
