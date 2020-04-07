@@ -7,7 +7,7 @@ public class PowerCalculatorService implements Runnable {
             if (number < 0 || power < 0) {
                 System.out.println("Error, all numbers should be positive");
             } else {
-                result *= number;
+                result = (int)Math.pow(number,power);
             }
         }
         System.out.println("Result of calculation = " + result);
