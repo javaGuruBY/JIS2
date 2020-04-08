@@ -4,19 +4,13 @@ import by.evgKor.Shape;
 
 import java.util.Objects;
 
-public class AbstractShape implements Shape {
+public abstract class AbstractShape implements Shape {
 
     private String name;
-    private double area;
 
     @Override
     public String getName() {
-        return name;
-    }
-
-    @Override
-    public double getArea() {
-        return area;
+        return this.name;
     }
 
     public AbstractShape(String name) {
