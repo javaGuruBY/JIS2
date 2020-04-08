@@ -10,10 +10,6 @@ public abstract class AbstractShape implements Shape {
         return this.name;
     }
 
-    public double getArea() {
-        return this.area;
-    }
-
     public AbstractShape(String name) {
         this.name = name;
     }
