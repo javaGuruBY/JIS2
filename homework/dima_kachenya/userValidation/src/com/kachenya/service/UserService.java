@@ -19,7 +19,7 @@ public class UserService {
     public void validUser() {
         if (!chekStartName()) {
             try {
-                throw new UserValidationExeption("Incorate name . Lenght < 3");
+                throw new UserValidationExeption("Incorate name . Lenght <= 3");
             } catch (UserValidationExeption e) {
                 System.out.println(e.getMessage());
                 e.getStackTrace();
@@ -35,7 +35,7 @@ public class UserService {
 
         if (!checkStartLastName()) {
             try {
-                throw new UserValidationExeption("Incorate last name . Lenght < 3");
+                throw new UserValidationExeption("Incorate last name . Lenght <= 3");
             } catch (UserValidationExeption e) {
                 System.out.println(e.getMessage());
                 e.getStackTrace();
@@ -60,7 +60,7 @@ public class UserService {
     }
 
     private boolean chekAge() {
-        if (user.getAge() > 0 && user.getAge() < 120) {
+        if (user.getAge() >= 0 && user.getAge() <= 120) {
 
             return true;
         }
@@ -69,7 +69,7 @@ public class UserService {
     }
 
     private boolean chekStartName() {
-        if (user.getFirstName().length() > 3) {
+        if (user.getFirstName().length() >= 3) {
 
             return true;
         }
@@ -78,7 +78,7 @@ public class UserService {
     }
 
     private boolean checkEndName() {
-        if (user.getFirstName().length() < 15) {
+        if (user.getFirstName().length() <= 15) {
 
             return true;
         }
@@ -87,7 +87,7 @@ public class UserService {
     }
 
     private boolean checkStartLastName() {
-        if (user.getLastName().length() > 3) {
+        if (user.getLastName().length() >= 3) {
 
             return true;
         }
@@ -96,7 +96,7 @@ public class UserService {
     }
 
     private boolean checkEndLastName() {
-        if (user.getLastName().length() < 15) {
+        if (user.getLastName().length() <= 15) {
 
             return true;
         }
