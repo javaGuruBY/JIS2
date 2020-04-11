@@ -17,7 +17,7 @@ public class LightColorDetector implements Serializable {
         return wavelength;
     }
 
-    public void setWavelength() {
+    public void setWavelength(int wavelength) {
         this.wavelength = wavelength;
     }
 
