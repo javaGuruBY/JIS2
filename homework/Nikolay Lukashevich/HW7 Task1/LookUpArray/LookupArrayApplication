@@ -1,0 +1,15 @@
+package by.lukash.LookupArray;
+
+import by.lukash.LookupArray.bean.LookUpArrayService;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class LookupArrayApplication {
+
+	public static void main(String[] args) {
+			Thread thread=new Thread(new LookUpArrayService());
+			thread.start();
+		}
+	//	SpringApplication.run(LookupArrayApplication.class, args);
+	}
