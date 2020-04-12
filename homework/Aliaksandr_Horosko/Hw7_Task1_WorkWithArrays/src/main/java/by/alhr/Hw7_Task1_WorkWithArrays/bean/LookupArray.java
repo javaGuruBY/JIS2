@@ -6,7 +6,6 @@ import java.util.Objects;
 
 public class LookupArray implements Serializable {
     int myArray [];
-//    int myArray [] = {125,228,25,548,18,97};
     int value;
 
     public LookupArray() {
@@ -32,7 +31,8 @@ public class LookupArray implements Serializable {
     public void setValue(int value) {
         this.value = value;
     }
-    public boolean isArrayEmpty(int[] myArray) {
+
+    public boolean emptyArray (int[] myArray) {
         if (myArray.length == 0) {
             return true;
         }
