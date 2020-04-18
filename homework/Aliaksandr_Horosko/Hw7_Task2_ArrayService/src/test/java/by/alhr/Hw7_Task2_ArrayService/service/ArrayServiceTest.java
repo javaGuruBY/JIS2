@@ -31,12 +31,10 @@ class ArrayServiceTest {
 
     @Test
     void printArray() {
-
         int[] expected = new int[]{};
         arrayServiceTest.printArray(arrayTest1);
         int[] actual = arrayTest1;
         assertArrayEquals(expected, actual);
-
     }
 
     @Test
