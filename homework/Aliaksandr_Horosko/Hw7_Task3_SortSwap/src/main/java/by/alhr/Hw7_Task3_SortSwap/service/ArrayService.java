@@ -50,24 +50,38 @@ public class ArrayService implements Serializable, Runnable {
         return number;
     }
 
-    int[] sort(int[] array) {
+    public void sort(int[] array) {
         System.out.print("Sort < : ");
-        Arrays.sort(array);
-        for (int i = 0; i < array.length; i++) {
+        for (int i = array.length - 1; i > 0; i--) {       //  сортировка массива пузырьком (по возрастанию)
+            for (int j = 0; j < i; j++) {
+                if (array[j] > array[j + 1]) {
+                    int tmp = array[j];
+                    array[j] = array[j + 1];
+                    array[j + 1] = tmp;
+                }
+            }
         }
+        //        Arrays.sort(array)                          //еще один вариант
+        //        for (int i = 0; i < array.length; i++) {
+        //        }
         System.out.println(Arrays.toString(array));
-        return array;
     }
 
-    void swap(int[] array) {
+    public void swap(int[] array) {
         System.out.print("Sort < : ");
 
-        int tmp;
-        int j = array.length;
-        for (int i = 0; i < j / 2; i++) {
-            tmp = array[j - i - 1];
-            array[j - i - 1] = array[i];
-            array[i] = tmp;
+        int last = array.length;                                //  сортировка массива пузырьком (по убыванию)
+        for (boolean sorted = last == 0; !sorted; --last) {
+            sorted = true;
+            for (int i = 1; i < last; i++) {
+                if (array[i - 1] < array[i]) {
+                    sorted = false;
+
+                    int tmp = array[i - 1];
+                    array[i - 1] = array[i];
+                    array[i] = tmp;
+                }
+            }
         }
         System.out.println(Arrays.toString(array));
     }

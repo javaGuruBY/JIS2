@@ -1,10 +1,10 @@
 package by.alhr.Hw7_Task3_SortSwap.service;
 
-import org.hamcrest.Matchers;
-import org.junit.Assert;
+
 import org.junit.jupiter.api.Test;
 
-import static org.hamcrest.MatcherAssert.assertThat;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class ArrayServiceTest {
     ArrayService arrayServiceTest = new ArrayService();
@@ -13,30 +13,55 @@ class ArrayServiceTest {
 
     @Test
     void create() {
-        Assert.assertEquals(4, arrayServiceTest.create(4).length);
+        int[] arrayTest2 = arrayServiceTest.create(10);
+        int[] expected = new int[10];
+        int[] actual = arrayTest2;
+        assertArrayEquals(expected, actual);
+//        Assert.assertEquals(5, arrayServiceTest.create(5).length);
+//        Assert.assertEquals(0, arrayServiceTest.create(0).length);
+    }
 
+    @Test
+    void fillRandomly() {
+        int[] expected = new int[]{};
+        arrayServiceTest.fillRandomly(arrayTest1);
+        int[] actual = arrayTest1;
+        assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    void printArray() {
+        int[] expected = new int[]{};
+        arrayServiceTest.printArray(arrayTest1);
+        int[] actual = arrayTest1;
+        assertArrayEquals(expected, actual);
     }
 
     @Test
     void sum() {
-        Assert.assertEquals(40, arrayServiceTest.sum(arrayTest));
-        Assert.assertEquals(0, arrayServiceTest.sum(arrayTest1));
+        assertEquals(40, arrayServiceTest.sum(arrayTest));
+        assertEquals(0, arrayServiceTest.sum(arrayTest1));
     }
-
 
     @Test
     void avg() {
-        Assert.assertEquals(8.0, arrayServiceTest.avg(arrayTest), 10 ^ 6);
-        Assert.assertEquals(0, arrayServiceTest.avg(arrayTest1), 10 ^ 6);
-
+        assertEquals(8.0, arrayServiceTest.avg(arrayTest), 10 ^ 6);
+        assertEquals(0, arrayServiceTest.avg(arrayTest1), 10 ^ 6);
     }
 
     @Test
     void sort() {
-        int[] result = arrayServiceTest.sort(arrayTest);
-        int[] expect = new int[]{2, 4, 8, 12, 14};
-        assertThat(result, Matchers.is(expect));
-
+        int[] expected = {2, 4, 8, 12, 14};
+        arrayServiceTest.sort(arrayTest);
+        int[] actual = arrayTest;
+        assertArrayEquals(expected, actual);
     }
 
+    @Test
+    void swap() {
+        int[] expected = {14, 12, 8, 4, 2};
+        arrayServiceTest.swap(arrayTest);
+        int[] actual = arrayTest;
+        assertArrayEquals(expected, actual);
+    }
 }

@@ -1,9 +1,7 @@
 package by.alhr.Hw7_Task3_SortSwap;
 
 import by.alhr.Hw7_Task3_SortSwap.service.ArrayService;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication
 public class Hw7Task3_SortSwapApplication {
 
     public static void main(String[] args) {
