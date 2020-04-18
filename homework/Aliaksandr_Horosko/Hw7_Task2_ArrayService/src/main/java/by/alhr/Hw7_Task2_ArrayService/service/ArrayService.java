@@ -18,9 +18,8 @@ public class ArrayService implements Serializable, Runnable {
 
     void printArray(int[] array) {
         for (int myNumber : array) {
-            System.out.print(myNumber + " ");
         }
-        System.out.println();
+        System.out.println(Arrays.toString(array));
     }
 
     int sum(int[] array) {
