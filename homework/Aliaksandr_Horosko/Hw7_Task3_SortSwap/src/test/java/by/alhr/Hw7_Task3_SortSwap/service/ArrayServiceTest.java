@@ -31,6 +31,7 @@ class ArrayServiceTest {
 
     @Test
     void printArray() {
+
         int[] expected = new int[]{};
         arrayServiceTest.printArray(arrayTest1);
         int[] actual = arrayTest1;
@@ -59,7 +60,7 @@ class ArrayServiceTest {
 
     @Test
     void swap() {
-        int[] expected = {14, 12, 8, 4, 2};
+        int[] expected = {4, 14, 8, 2, 12};
         arrayServiceTest.swap(arrayTest);
         int[] actual = arrayTest;
         assertArrayEquals(expected, actual);

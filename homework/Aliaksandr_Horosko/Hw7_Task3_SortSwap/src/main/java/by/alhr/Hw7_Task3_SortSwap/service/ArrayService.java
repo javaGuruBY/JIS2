@@ -69,20 +69,26 @@ public class ArrayService implements Serializable, Runnable {
 
     public void swap(int[] array) {
         System.out.print("Sort < : ");
-
-        int last = array.length;                                //  сортировка массива пузырьком (по убыванию)
-        for (boolean sorted = last == 0; !sorted; --last) {
-            sorted = true;
-            for (int i = 1; i < last; i++) {
-                if (array[i - 1] < array[i]) {
-                    sorted = false;
-
-                    int tmp = array[i - 1];
-                    array[i - 1] = array[i];
-                    array[i] = tmp;
-                }
-            }
+        int tmp;
+        int j = array.length;                         // метод, который переставляет ->
+        for (int i = 0; i < j  / 2; i++) {            // -> все элементы массива в обратном порядке
+            tmp = array[j  - i - 1];
+            array[j - i - 1] = array[i];
+            array[i] = tmp;
         }
+//        int last = array.length;
+//        for (boolean sorted = last == 0; !sorted; --last) {     //  сортировка массива пузырьком (по убыванию)
+//            sorted = true;
+//            for (int i = 1; i < last; i++) {
+//                if (array[i - 1] < array[i]) {
+//                    sorted = false;
+//
+//                    int tmp = array[i - 1];
+//                    array[i - 1] = array[i];
+//                    array[i] = tmp;
+//                }
+//            }
+//        }
         System.out.println(Arrays.toString(array));
     }
 
