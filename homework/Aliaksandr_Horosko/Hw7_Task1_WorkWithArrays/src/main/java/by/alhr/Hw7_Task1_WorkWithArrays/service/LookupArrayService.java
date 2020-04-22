@@ -49,7 +49,6 @@ public class LookupArrayService implements Runnable {
                     idxMax = i;
                 }
             }
-
         }
         System.out.println("indexOfMax = " + idxMax);
         return idxMax;
@@ -69,7 +68,6 @@ public class LookupArrayService implements Runnable {
         }
         System.out.println("indexOfMin = " + idxMin);
         return idxMin;
-
     }
 
     public int indexOf(LookupArray lookupArray) {
@@ -84,11 +82,9 @@ public class LookupArrayService implements Runnable {
                     break;
                 }
             }
-
         }
         System.out.println("IndexOf = " + idx);
         return idx;
-
     }
 
     @Override
@@ -109,6 +105,5 @@ public class LookupArrayService implements Runnable {
         lookupArrayService.indexOfMax(lookupArray1);
         lookupArrayService.indexOfMin(lookupArray1);
         lookupArrayService.indexOf(lookupArray1);
-
     }
 }
