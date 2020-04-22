@@ -6,13 +6,11 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class ArrayServiceTest {
-    ArrayService arrayServiceTest = new ArrayService();
-    int[] arrayTest = new int[]{12, 2, 8, 14, 4};
-    int[] arrayTest1 = new int[]{};
+public class ArrayServiceTest {
 
     @Test
-    void create() {
+    public void create() {
+        ArrayService arrayServiceTest = new ArrayService();
         int[] arrayTest2 = arrayServiceTest.create(10);
         int[] expected = new int[10];
         int[] actual = arrayTest2;
@@ -22,7 +20,9 @@ class ArrayServiceTest {
     }
 
     @Test
-    void fillRandomly() {
+    public void fillRandomly() {
+        ArrayService arrayServiceTest = new ArrayService();
+        int[] arrayTest1 = new int[]{};
         int[] expected = new int[]{};
         arrayServiceTest.fillRandomly(arrayTest1);
         int[] actual = arrayTest1;
@@ -30,8 +30,9 @@ class ArrayServiceTest {
     }
 
     @Test
-    void printArray() {
-
+    public void printArray() {
+        ArrayService arrayServiceTest = new ArrayService();
+        int[] arrayTest1 = new int[]{};
         int[] expected = new int[]{};
         arrayServiceTest.printArray(arrayTest1);
         int[] actual = arrayTest1;
@@ -39,19 +40,27 @@ class ArrayServiceTest {
     }
 
     @Test
-    void sum() {
+    public void sum() {
+        ArrayService arrayServiceTest = new ArrayService();
+        int[] arrayTest = new int[]{12, 2, 8, 14, 4};
+        int[] arrayTest1 = new int[]{};
         assertEquals(40, arrayServiceTest.sum(arrayTest));
         assertEquals(0, arrayServiceTest.sum(arrayTest1));
     }
 
     @Test
-    void avg() {
+    public void avg() {
+        ArrayService arrayServiceTest = new ArrayService();
+        int[] arrayTest = new int[]{12, 2, 8, 14, 4};
+        int[] arrayTest1 = new int[]{};
         assertEquals(8.0, arrayServiceTest.avg(arrayTest), 10 ^ 6);
         assertEquals(0, arrayServiceTest.avg(arrayTest1), 10 ^ 6);
     }
 
     @Test
-    void sort() {
+    public void sort() {
+        ArrayService arrayServiceTest = new ArrayService();
+        int[] arrayTest = new int[]{12, 2, 8, 14, 4};
         int[] expected = {2, 4, 8, 12, 14};
         arrayServiceTest.sort(arrayTest);
         int[] actual = arrayTest;
@@ -59,7 +68,9 @@ class ArrayServiceTest {
     }
 
     @Test
-    void swap() {
+    public void swap() {
+        ArrayService arrayServiceTest = new ArrayService();
+        int[] arrayTest = new int[]{12, 2, 8, 14, 4};
         int[] expected = {4, 14, 8, 2, 12};
         arrayServiceTest.swap(arrayTest);
         int[] actual = arrayTest;
