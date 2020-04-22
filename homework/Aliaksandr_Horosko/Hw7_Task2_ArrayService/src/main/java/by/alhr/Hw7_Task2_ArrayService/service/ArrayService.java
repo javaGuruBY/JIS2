@@ -32,7 +32,7 @@ public class ArrayService implements Serializable, Runnable {
     }
 
     double avg(int[] array) {
-        int number=0;
+        int number = 0;
         if (array.length == 0) {
         } else {
             double averageNumber = 0;
@@ -49,7 +49,6 @@ public class ArrayService implements Serializable, Runnable {
         System.out.println("Average = " + number);
         return number;
     }
-
 
     @Override
     public void run() {
