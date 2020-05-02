@@ -1,8 +1,9 @@
 package by.alhr.Hw9_Task3_Library.bean;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Book {
+public class Book implements Serializable {
     String nameBook;
     String author;
 
