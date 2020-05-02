@@ -3,9 +3,11 @@ package by.evgKor.service;
 import by.evgKor.bean.Book;
 
 import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Set;
 
-public class Library implements Runnable {
+public class Library {
 
     protected Set<Book> libraryEx = new HashSet<>();
 
@@ -29,29 +31,15 @@ public class Library implements Runnable {
         return null;
     }
 
-    public Book findBookByAuthor(String author){
-        for (Book authors : libraryEx
-        ) {
-            if (authors.getBookAuthor().equals(author)) {
-                return authors;
+    public List<Book> findBookByAuthor(String bookAuthor) {
+        List<Book> bookList = new LinkedList<>();
+        for (Book booksByAuthor : libraryEx) {
+            if (booksByAuthor.getBookAuthor().equals(bookAuthor)) {
+                bookList.add(booksByAuthor);
             }
         }
-        return null;
+        System.out.println("Books by author: " + "\n" + bookList);
+        return bookList;
     }
 
-    @Override
-    public void run() {
-        Book bookOne = new Book("Lev Tolstoy", "War and Peace");
-        Book bookTwo = new Book("Lev Tolstoy", "Anna Karenina");
-        Book bookThree = new Book("Vladimir Mayakovsky", "Pro eto");
-        Book bookFour = new Book("James Joyce", "Ulysses");
-        Library library = new Library();
-        library.addBook(bookOne);
-        library.addBook(bookTwo);
-        library.addBook(bookThree);
-        library.addBook(bookFour);
-        library.deleteBookFromLibrary(bookTwo);
-        System.out.println(library.findOneBookByTitle("Ulysses"));
-        System.out.println(library.findBookByAuthor("Lev Tolstoy"));
-    }
 }

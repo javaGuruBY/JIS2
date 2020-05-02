@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/homework/Dima_kachenya/human/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/homework/Eugene_Sergeev/Hw3Task1/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/homework/Dima_kachenya/Dog/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lector/example/jistwo/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/homework/Dima_kachenya/cicrle/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/homework/Aliaksandr_Horosko/Hw2_Task3/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lector/example/jistwo/src/test/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/homework/Aliaksandr_Horosko/Hw3_Task2/src/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/homework/Eugene_Sergeev/Hw3Task3/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/homework/Eugene_Sergeev/Hw3Task4/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/homework/Anastasia_Kichaeva/Hw2_Task3/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/homework/Eugene_Sergeev/Hw2Task3/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/homework/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/homework/Anastasia_Kichaeva/Hw3_Task2/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/homework/Anastasia_Kichaeva/Hw3_Task4/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/homework/Evgeny_Korovin/Hw9_Task3/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/homework/Anastasia_Kichaeva/Hw3_Task3/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/homework/Dima_kachenya/encoder/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lector/example/jistwo/.mvn/wrapper" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+  <component name="sonarModuleSettings">
+    <option name="alternativeWorkingDirPath" value="" />
+    <option name="localAnalysisScripName" value="&lt;PROJECT&gt;" />
+    <option name="serverName" value="&lt;PROJECT&gt;" />
+    <option name="useAlternativeWorkingDir" value="false" />
+    <option name="workingDirSelection" value="&lt;MODULE&gt;" />
+  </component>
+</module>
