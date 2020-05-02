@@ -2,7 +2,7 @@ package Hw9_Task2_UniqueWordCounter.service;
 
 import java.util.*;
 
-public class UniqueWordCounterService implements Runnable {
+public class UniqueWordCounterService {
     public Map<String, Integer> wordHolderMap = new HashMap<String, Integer>();
     public ArrayList<String> wordList = new ArrayList<String>();
 
@@ -38,18 +38,5 @@ public class UniqueWordCounterService implements Runnable {
         for (Map.Entry<String, Integer> entry : wordHolderMap.entrySet()) {
             System.out.print(entry.getKey() + " = " + entry.getValue() + "; ");
         }
-    }
-
-    public void run() {
-        addWord("apple");
-        addWord("mango");
-        addWord("orange");
-        addWord("apple");
-        addWord("apple");
-        addWord("salo");
-
-        addWordToWordCounterMap();
-        getMostFrequentWord();
-        printInformation();
     }
 }
