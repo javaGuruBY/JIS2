@@ -1,0 +1,18 @@
+package by.lukash.PrimeNumbers;
+
+
+import by.lukash.PrimeNumbers.bean.HW6Task2;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class PrimeNumbersApplication {
+
+	public static void main(String[] args) {
+
+		HW6Task2 hw6Task1 = new HW6Task2();
+		hw6Task1.PrimeNumbers();
+		//SpringApplication.run(PrimeNumbersApplication.class, args);
+	}
+
+}
