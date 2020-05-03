@@ -1,0 +1,51 @@
+package by.lukash.ArrayService.service;
+
+import java.util.*;
+
+
+
+
+public class ArrayService implements Runnable {
+    @Override
+    public void run() {
+        ArrayService arrayService = new ArrayService();
+        int[] array = arrayService.create(100);
+        arrayService.fillRandomly(array);
+        //arrayService.swap(array, 0, 1);
+        //     arrayService.printArray(array);
+        //      arrayService.sum(array);
+        //      arrayService.avg(array);
+
+    }
+
+
+    public int[] create(int size) {
+        int[] array = new int[size];
+        return array;
+    }
+    public void fillRandomly(int[] array) {
+        for (int i = 0; i < array.length; i++) {
+            array[i] = (int) (Math.random() * 100);
+            Arrays.sort(array);
+            System.out.println("i = " + i);
+        }
+    }
+
+}
+//  public static void swap(int[] array, int i, int j) {
+//
+//      int temp = array[i];
+//    array[i] = array[j];
+//  array[j] = temp;
+//boolean needIteration = true;
+// while (needIteration) {
+//
+// for (i = 1; i < array.length; i++) {
+//   if (array[i] < array[i - 1]) {
+//     swap(array, i, i - 1);
+//   needIteration = true;
+// System.out.println(Arrays.toString(array));
+//                }
+//          }
+//    }
+//   }
