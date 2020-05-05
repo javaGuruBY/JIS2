@@ -7,14 +7,14 @@ import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class UniqueWordCounterTest {
+public class UniqueWordCounterTest {
 
     @Test
-    void addWord() {
+    public void addWord() {
     }
 
     @Test
-    void addWordToWordCounterMap() {
+    public void addWordToWordCounterMap() {
         UniqueWordCounter uniqueWordCounter = new UniqueWordCounter();
         Map<String, Integer> wordCounterMapTest = new HashMap<>();
 
@@ -32,7 +32,7 @@ class UniqueWordCounterTest {
     }
 
     @Test
-    void countsNumberOfTimesToAdd() {
+    public void countsNumberOfTimesToAdd() {
         UniqueWordCounter uniqueWordCounter = new UniqueWordCounter();
         Map<String, Integer> wordCounterMapTest = new HashMap<>();
 
@@ -46,17 +46,34 @@ class UniqueWordCounterTest {
     }
 
     @Test
-    void getMostFrequentWord() {
+    public void countsNumberOfTimesToAdd_ShouldReturn0_ifNotInTheList() {
+        UniqueWordCounter uniqueWordCounter = new UniqueWordCounter();
+        Map<String, Integer> wordCounterMapTest = new HashMap<>();
+
+        String notInCollectionWord = "Max";
+        uniqueWordCounter.wordCounterMap = wordCounterMapTest;
+        int expected = 0;
+        int actual = uniqueWordCounter.countsNumberOfTimesToAdd(notInCollectionWord);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void getMostFrequentWord() {
         UniqueWordCounter uniqueWordCounter = new UniqueWordCounter();
         Map<String, Integer> wordCounterMapTest = new HashMap<>();
 
         String word = "Garik";
-        wordCounterMapTest.put(word, 5);
-        String word2 = "Garik2";
-        wordCounterMapTest.put(word2, 8);
+        String word2 = "Garik";
+        String word3 = "Max";
+        String word4 = "Garik";
+
+        wordCounterMapTest.put(word, 1);
+        wordCounterMapTest.put(word2, 2);
+        wordCounterMapTest.put(word3, 1);
+        wordCounterMapTest.put(word4, 3);
 
         uniqueWordCounter.wordCounterMap = wordCounterMapTest;
-        String expected = word2;
+        String expected = "Garik=3";
         String actual = uniqueWordCounter.getMostFrequentWord();
         assertEquals(expected, actual);
     }
